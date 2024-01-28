@@ -1,23 +1,25 @@
+//require.paths.push('/Users/chand/lin/node_modules');
+
 const PORT = process.env.PORT || 8000
-const express = require('express')
-const axios = require('axios')
-const cheerio = require('cheerio')
-const { response } = require('express')
+const express = require("express");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const { response } = require("express");
 
 
-const app = express()
+const app = express();
 const np = [{
-    name: 'dailymail', add: 'https://www.dailymail.co.uk/home/search.html?sel=site&searchPhrase=plastic+pollution',
+    name: 'toi', add: 'https://timesofindia.indiatimes.com/topic/plastic/news',
     base: ''
 },
 {
-    name: 'the guardian', add: 'https://www.theguardian.com/environment/plastic',
+    name: 'thehindu', add: 'https://www.thehindu.com/tag/62824-870-684/',
     base: ''
-},
-{
-    name: 'telegraph', add: 'https://www.telegraph.co.uk/plastic/',
-    base: 'https://www.telegraph.co.uk'
 }
+// {
+//     name: 'telegraph', add: 'https://www.telegraph.co.uk/plastic/',
+//     base: 'https://www.telegraph.co.uk'
+// }
 ]
 const articles = []
 
